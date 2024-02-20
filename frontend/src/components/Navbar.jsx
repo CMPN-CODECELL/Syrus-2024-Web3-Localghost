@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'Dashboard', href: '/', current: true },
   { name: 'Add a new Vaccine batch', href: '/form', current: false },
-  { name: 'Get Vaccine information', href: '#', current: false },
+  { name: 'Get Vaccine information', href: 'scanqr', current: false },
   { name: 'About', href: '#', current: false },
 ]
 
@@ -34,11 +34,12 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  {/* <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Your Company"
-                  />
+                  /> */}
+                  <span className='text-2xl'>Vax</span> <span className='text-blue-400 text-2xl'>Chain</span>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">

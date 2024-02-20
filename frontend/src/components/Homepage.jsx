@@ -2,13 +2,14 @@ import React from 'react'
 import Navbar from './Navbar'
 
 function Homepage() {
-  return (
-    <div className="h-screen bg-gradient-to-r from-indigo-200 to-teal-50">
+  return (<>
         <Navbar/>
-        <h1 className="text-3xl font-bold text-center">
-        Welcome to Vaxchain
+        <div className='flex items-center justify-center h-screen'>
+        <h1 className="text-8xl font-bold text-center">
+          Welcome to Vaxchain
         </h1>
-    </div>
+      </div>
+      </>
   )
 }
 

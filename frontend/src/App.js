@@ -5,6 +5,7 @@ import FormComponent from './components/FormComponent';
 import { BrowserRouter as Router,Routes, Switch, Route, BrowserRouter } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import FormPage from './components/FormPage';
+import QRPage from './components/QRPage';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage/>} />
           <Route path="/form" element={<FormPage/>} />
+          <Route path="/scanqr" element={<QRPage/>} />
         </Routes>
       </BrowserRouter>
       
