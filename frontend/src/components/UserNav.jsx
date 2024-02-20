@@ -4,9 +4,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '/', current: false },
-  { name: 'Add a new Vaccine batch', href: '/form', current: false },
   { name: 'Get Vaccine information', href: 'scanqr', current: false },
-  { name: 'About', href: '/about', current: false },
   { name: 'File a grievance', href: '/feedback', current: false },
 ]
 

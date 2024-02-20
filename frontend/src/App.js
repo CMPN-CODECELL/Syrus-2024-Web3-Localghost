@@ -7,6 +7,8 @@ import Homepage from './components/Homepage';
 import FormPage from './components/FormPage';
 import QRPage from './components/QRPage';
 import AboutPage from './components/AboutPage';
+import GrievanceForm from './components/Feedback';
+import UserPage from './components/UserPage';
 
 function App() {
   return (
@@ -14,9 +16,12 @@ function App() {
       <BrowserRouter> 
         <Routes>
           <Route path="/" element={<Homepage/>} />
+          <Route path="/userdashboard" element={<UserPage/>} />
           <Route path="/form" element={<FormPage/>} />
           <Route path="/scanqr" element={<QRPage/>} />
           <Route path="/about" element={<AboutPage/>} />
+          <Route path="/userdashboard" element={<UserPage/>} />
+          <Route path="/feedback" element={<GrievanceForm/>} />
         </Routes>
       </BrowserRouter>
     </div>
