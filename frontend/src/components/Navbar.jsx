@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '/', current: true },
+  { name: 'Dashboard', href: '/', current: false },
   { name: 'Add a new Vaccine batch', href: '/form', current: false },
   { name: 'Get Vaccine information', href: 'scanqr', current: false },
   { name: 'About', href: '#', current: false },
