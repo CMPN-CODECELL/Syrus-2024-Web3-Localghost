@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label>
+        Name:
+        <input type="text" id="name" name="name" />
+      </label>
+      <label>
+        Email:
+        <input type="email" id="email" name="email" />
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Call the function to send data to the server
+          sendDataToServer({ name: this.name.value, email: this.email.value });
+        });
+
+      (async function sendDataToServer(data) {
+        try {
+          const response = await fetch(
+            "https://github.com/Shashwat3012/test/https://www.npoint.io/docs/cefa215ebc8ce1350546",
+            {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          const responseData = await response.json();
+          console.log(responseData);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      })();
+    </script>
+  </body>
+</html>
