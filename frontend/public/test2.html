@@ -8,13 +8,33 @@
   <body>
     <div>
       <p>Manufacturing Company - <span id="wallet-address"></span></p>
-      <button id="mint">Produce Token for this vaccine</button>
+      <button onclick="handleClick" id="mint">
+        Produce Token for this vaccine
+      </button>
     </div>
 
     <script type="text/javascript">
       var account = null;
       var contract = null;
       const ABI = [
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "tokenId",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "additionalData",
+              type: "string",
+            },
+          ],
+          name: "appendMetadata",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
         {
           inputs: [],
           stateMutability: "nonpayable",
@@ -84,6 +104,24 @@
             },
           ],
           name: "approve",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_address",
+              type: "address",
+            },
+            {
+              internalType: "enum VaccineTokenNew.Role",
+              name: "_role",
+              type: "uint8",
+            },
+          ],
+          name: "grantRole",
           outputs: [],
           stateMutability: "nonpayable",
           type: "function",
@@ -421,20 +459,16 @@
           type: "function",
         },
       ];
-      const ADDRESS = "0xBf63EFe33209ec6E5D35A8aBf478B39Ae5a7E0ab";
+      const ADDRESS = "0xd3f725c0cbc4D35C1d796A280a0D03EB16aB0D62";
+
+      const handleClick = async () => {
+        await contract.methods
+          .safeMint(account, "https://api.npoint.io/0ea2c511811507a9ec3a")
+          .send({ from: account });
+        console.log("Token created");
+      };
 
       (async () => {
-        // if (window.ethereum) {
-        //   await window.ethereum.send("eth_requestAccounts");
-        //   window.web3 = new Web3(window.ethereum);
-
-        //   var accounts = await web3.eth.getAccounts();
-        //   account = accounts[0];
-        //   document.getElementById("wallet-address").onclick = () => {
-        //     increaseCurrentCount();
-        //   };
-        // }
-
         if (window.ethereum) {
           try {
             await window.ethereum.request({
