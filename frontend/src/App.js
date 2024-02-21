@@ -9,6 +9,9 @@ import QRPage from './components/QRPage';
 import AboutPage from './components/AboutPage';
 import GrievanceForm from './components/Feedback';
 import UserPage from './components/UserPage';
+import Login from './components/Login';
+import Userscanqr from './components/Userscanqr';
+import Userfeedback from './components/Userfeedback';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
           <Route path="/about" element={<AboutPage/>} />
           <Route path="/userdashboard" element={<UserPage/>} />
           <Route path="/feedback" element={<GrievanceForm/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Userscanqr" element={<Userscanqr />} />
+          <Route path="/Userfeedback" element={<Userfeedback />} />
         </Routes>
       </BrowserRouter>
     </div>

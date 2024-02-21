@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 
-function Homepage() {
+function Homepage() {   
   useEffect(() => {
     // Disable scrolling when the component mounts
     document.body.style.overflow = 'hidden';

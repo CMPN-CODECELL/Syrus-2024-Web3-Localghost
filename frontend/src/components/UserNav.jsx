@@ -3,9 +3,9 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '/', current: false },
-  { name: 'Get Vaccine information', href: 'scanqr', current: false },
-  { name: 'File a grievance', href: '/feedback', current: false },
+  { name: 'Dashboard', href: '/userdashboard', current: false },
+  { name: 'Get Vaccine information', href: 'Userscanqr', current: false },
+  { name: 'File a grievance', href: '/Userfeedback', current: false },
 ]
 
 function classNames(...classes) {
