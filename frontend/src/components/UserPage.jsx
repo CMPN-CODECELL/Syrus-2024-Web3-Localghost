@@ -5,7 +5,7 @@ const UserPage = () => {
   return (
     <div className="flex h-screen flex-col">
       <UserNav />
-      <div className="h-screen flex  justify-center">
+      <div className="h-screen flex items-center justify-center">
         <h1 className="text-8xl font-bold text-center">Welcome to Vaxchain</h1>
       </div>
     </div>
